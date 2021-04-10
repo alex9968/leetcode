@@ -10,6 +10,9 @@ type ValNode struct {
 	val int
 }
 
+// https://jingzhisheng.cn/blog/detail/1233983852930797568
+// 稀疏数组
+
 func main() {
 	//create arr
 	var chessMap [6][6]int
