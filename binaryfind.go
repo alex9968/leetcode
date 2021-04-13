@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://www.cnblogs.com/JinweiChang/p/14160657.html
 func main() {
 	s := []int{11, 22, 33, 44, 55, 66}
 	binaryfind(&s, 44, 0, 5)
