@@ -10,6 +10,13 @@ type ListNode struct {
 	Next *ListNode
 }
 
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+
 func createList(length int) *ListNode {
 	head := new(ListNode)
 	curr := head
@@ -42,4 +49,12 @@ func showList(listName string, l *ListNode) {
 		curr = curr.Next
 	}
 	fmt.Println()
+}
+
+func getListLen(head *ListNode) int {
+	length := 0
+	for ; head != nil; head = head.Next {
+		length++
+	}
+	return length
 }

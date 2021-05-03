@@ -14,6 +14,7 @@ func main() {
 	showList("res", res)
 }
 
+//两个数做加法
 func addTwoNumbers(l1, l2 *ListNode) *ListNode {
 
 	head := new(ListNode)
