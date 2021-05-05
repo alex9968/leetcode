@@ -6,37 +6,17 @@ func main() {
 
 }
 
-func Test(nums []int) [][]int {
-	n := len(nums)
+func Test(nums []int, target int) (res [][]int) {
 	sort.Ints(nums)
+	n := len(nums)
 
-	ans := make([][]int, 0)
-
-	for first := 0; first < n; first++ {
-		if first > 0 && first == nums[first-1] {
+	for i:=0;  i< n-3 && nums[i] + nums[i+1] + nums[i+2] + nums[i+3] <= target; i++ {
+		if i> 0 && nums[i] == nums[i-1] || nums[i] + nums[n-3]+ nums[n-2]+ nums[n-1] < target {
 			continue
 		}
 
-		third := n - 1
-		target := -1 * nums[first]
+		for j := i+1; j< n-2 && nums[i] + nums[j]
 
-		for second := first + 1; second < n; second++ {
-			if second > first+1 && nums[second] == nums[second-1] {
-				continue
-			}
-
-			for second < third && nums[second]+nums[third] > target {
-				third--
-			}
-			if second == third {
-				break
-			}
-
-			if nums[second]+nums[third] == target {
-				ans = append(ans, []int{nums[first], nums[second], nums[third]})
-			}
-		}
-
-	}
+	} 
 
 }
