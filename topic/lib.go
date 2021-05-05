@@ -17,6 +17,13 @@ func max(x, y int) int {
 	return y
 }
 
+func min(x, y int) int {
+	if x < y {
+		return x
+	}
+	return y
+}
+
 func createList(length int) *ListNode {
 	head := new(ListNode)
 	curr := head

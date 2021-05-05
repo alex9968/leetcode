@@ -1,22 +1,37 @@
 package main
 
-import "sort"
+import (
+	"fmt"
+)
 
 func main() {
-
+	fmt.Println("res1:", Test([]string{"flower", "flow", "flight"})) //fl
+	fmt.Println("res2:", Test([]string{"dog", "racecar", "car"}))    // ""                                         // ""
 }
 
-func Test(nums []int, target int) (res [][]int) {
-	sort.Ints(nums)
-	n := len(nums)
+func Test(strs []string) string {
+	if len(strs) == 0 {
+		return ""
+	}
 
-	for i:=0;  i< n-3 && nums[i] + nums[i+1] + nums[i+2] + nums[i+3] <= target; i++ {
-		if i> 0 && nums[i] == nums[i-1] || nums[i] + nums[n-3]+ nums[n-2]+ nums[n-1] < target {
-			continue
+	prefix := strs[0]
+	n := len(strs)
+
+	for i := 0; i < n; i++ {
+		prefix = lcp(prefix, strs[i])
+		if len(prefix) == 0 {
+			break
 		}
+	}
 
-		for j := i+1; j< n-2 && nums[i] + nums[j]
+	return prefix
+}
 
-	} 
-
+func lcp(s1, s2 string) string {
+	n := min(len(s1), len(s2))
+	index := 0
+	for index < n && s1[index] == s2[index] {
+		index++
+	}
+	return s1[:index]
 }
