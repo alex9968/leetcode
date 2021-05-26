@@ -26,3 +26,12 @@ func main() {
 		}
 	}
 }
+
+func f() {
+
+}
+
+func f() int {
+	// fmt.Print(a)
+	return 0
+}
