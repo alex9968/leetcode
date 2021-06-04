@@ -16,6 +16,7 @@ func main() {
 	a = f(a)
 	a = f(a)
 	fmt.Print(a)
+	print("aa")
 }
 
 func f(s []int) []int {
