@@ -61,6 +61,6 @@ func ParseBool(val interface{}) (value bool, err error) {
 // }
 // func main() {
 // 	fmt.Println(add(1,2))
-// 	// FIXME
+// 	//
 // 	//fmt.Println(add("foo","bar"))
 // }
