@@ -5,22 +5,22 @@ import (
 	"fmt"
 )
 
-type Person struct {
+type Persons struct {
 	Name string `json:"name"`
 }
 
 type Tow struct {
-	Person1 Person `json:"person1"`
-	Person2 Person `json:"person2"`
+	Person1 Persons `json:"person1"`
+	Person2 Persons `json:"person2"`
 }
 
 //channel关闭之后，仍然可以从channel中读取剩余的数据，直到数据全部读取完成
 func main() {
 	t := Tow{
-		Person1 : Person {
+		Person1 : Persons {
 		    Name: "sss",
 		},
-		Person2 : Person {
+		Person2 : Persons {
 			Name: "sss22",
 		},
 	}
